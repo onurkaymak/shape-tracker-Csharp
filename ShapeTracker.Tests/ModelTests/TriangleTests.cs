@@ -44,7 +44,7 @@ namespace ShapeTracker.Tests
     [TestMethod]
     public void SetSide2_SetsValueOfSide2_Void()
     {
-      Triangle newTriangle = new Triangle(3,4, 8);
+      Triangle newTriangle = new Triangle(3, 4, 8);
       int newLength2 = 6;
       newTriangle.Side2 = newLength2;
       Assert.AreEqual(newLength2, newTriangle.Side2);
@@ -74,6 +74,14 @@ namespace ShapeTracker.Tests
       Triangle notATriangle = new Triangle(3, 4, 88);
       string triType = notATriangle.CheckType();
       Assert.AreEqual("not a triangle", triType);
+    }
+
+    [TestMethod]
+    public void CheckType_DeterminesWhenScalene_String()
+    {
+      Triangle scaleneTri = new Triangle(3, 4, 5);
+      string triType = scaleneTri.CheckType();
+      Assert.AreEqual("scalene triangle", triType);
     }
   }
 }
