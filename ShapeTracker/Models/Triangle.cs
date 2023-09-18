@@ -39,7 +39,7 @@ namespace ShapeTracker.Models
         return "scalene triangle";
       }
       {
-        return "";
+        return "isosceles triangle";
       }
     }
   }
